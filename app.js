@@ -17,7 +17,6 @@ app.use('/api/orders', orderRoutes);
 
 // Connect to MongoDB
 mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
 const PORT = process.env.PORT || 4000;
